@@ -1,3 +1,7 @@
+.wrapApp a {
+  display: block;
+  text-align: center;
+}
 .App {
   font-family: sans-serif;
   max-width: 500px;
