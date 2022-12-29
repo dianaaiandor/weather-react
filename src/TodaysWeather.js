@@ -33,14 +33,14 @@ export default function TodaysWeather(props) {
             width={200}
           />
         </div>
-        <div className="col-sm-4 temperature">
+        <div className="col-sm-4">
           <p>
             <span className="current-temperature">{props.temperature}</span>
             <span className="degree">
               <span>°C</span>
             </span>
           </p>
-          <p className="feeling">
+          <p>
             feels like: {props.feeling}
             °C
           </p>

@@ -1,12 +1,18 @@
 .wrapApp a {
   display: block;
   text-align: center;
+  color: #1d7d81;
 }
 .App {
   font-family: sans-serif;
   max-width: 500px;
   margin: 25px auto;
-  background: linear-gradient(-225deg, #20e2d7 0%, #f9fea5 100%);
+  background: linear-gradient(
+    106.7deg,
+    rgb(245, 167, 191) -6.2%,
+    rgb(201, 218, 238) 46.4%,
+    rgb(164, 240, 229) 86.4%
+  );
   padding: 20px;
   border-radius: 30px;
   font-family: "Roboto", sans-serif;
