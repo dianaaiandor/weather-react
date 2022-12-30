@@ -6,3 +6,26 @@
 .Weather .current-temperature {
   font-size: 40px;
 }
+
+.Search h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.Search input {
+  opacity: 0.33;
+  border-radius: 10px;
+  border: #35495e 1px solid;
+  line-height: 1.5;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.Search button {
+  opacity: 0.33;
+  border-radius: 10px;
+  border: #35495e 1px solid;
+  line-height: 1.5;
+  font-size: 18px;
+  padding-left: 10px;
+}

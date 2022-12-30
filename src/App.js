@@ -1,15 +1,12 @@
 import "./App.css";
 import Weather from "./Weather";
 
-import Search from "./Search";
-
 function App() {
   return (
     <div className="wrapApp">
       <div className="App">
         <div className="container">
-          <Search name="Kyiv" />
-          <Weather />
+          <Weather defaultCity="Paris" />
         </div>
       </div>
       <a
