@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Weather.css";
 import FormattedDate from "./FormattedDate";
+import WeatherToday from "./WeatherToday";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -23,51 +24,11 @@ export default function Weather(props) {
   if (ready) {
     return (
       <div className="Weather container">
-        <p>
+        <div>
           <FormattedDate date={weatherData.date} />
-        </p>
-        <div className="row">
-          <div className="col-sm-4 weather-parameters">
-            <p>
-              <strong>{weatherData.description}</strong>
-            </p>
-            <p>
-              wind:{" "}
-              <span>
-                <span>{Math.round(weatherData.wind)}</span> m/c
-              </span>
-            </p>
-            <p>
-              humidity:{" "}
-              <span>
-                {" "}
-                <span>{weatherData.humidity}</span> %{" "}
-              </span>
-            </p>
-          </div>
-          <div className="col-sm-4">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
-              alt="sun"
-              id="icon"
-              className="img-fluid"
-              width={200}
-            />
-          </div>
-          <div className="col-sm-4">
-            <p>
-              <span className="current-temperature">
-                {Math.round(weatherData.temperature)}
-              </span>
-              <span className="degree">
-                <span>°C</span>
-              </span>
-            </p>
-            <p>
-              feels like: {Math.round(weatherData.feeling)}
-              °C
-            </p>
-          </div>
+        </div>
+        <div>
+          <WeatherToday apiData={weatherData} />
         </div>
       </div>
     );

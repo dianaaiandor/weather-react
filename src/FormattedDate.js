@@ -14,7 +14,7 @@ export default function FormattedDate(props) {
     "Friday",
     "Saturday",
   ];
-
+  console.log("godina", props.date);
   if (hour < 10) {
     hour = "0" + hour;
   }
