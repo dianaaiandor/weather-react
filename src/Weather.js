@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Weather.css";
-import Date from "./Date";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -15,6 +15,7 @@ export default function Weather(props) {
       humidity: responce.data.temperature.humidity,
       temperature: responce.data.temperature.current,
       feeling: responce.data.temperature.feels_like,
+      date: new Date(responce.data.time * 1000),
     });
     setReady(true);
   }
@@ -22,7 +23,9 @@ export default function Weather(props) {
   if (ready) {
     return (
       <div className="Weather container">
-        <Date />
+        <p>
+          <FormattedDate date={weatherData.date} />
+        </p>
         <div className="row">
           <div className="col-sm-4 weather-parameters">
             <p>
