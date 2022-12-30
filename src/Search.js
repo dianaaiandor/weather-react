@@ -4,7 +4,7 @@ import "./Search.css";
 export default function Search(props) {
   return (
     <div className="Search">
-      <h1>Current weather: {props.name}</h1>
+      <h1> {props.name}</h1>
       <form>
         <div className="row">
           <div className="col-9">

@@ -1,6 +1,6 @@
 import "./App.css";
-import TodaysWeather from "./TodaysWeather";
-import Date from "./Date";
+import Weather from "./Weather";
+
 import Search from "./Search";
 
 function App() {
@@ -8,15 +8,8 @@ function App() {
     <div className="wrapApp">
       <div className="App">
         <div className="container">
-          <Date />
           <Search name="Kyiv" />
-          <TodaysWeather
-            description="Clouds"
-            wind={12}
-            humidity={80}
-            temperature={20}
-            feeling={18}
-          />
+          <Weather />
         </div>
       </div>
       <a
