@@ -6,7 +6,6 @@ import WeatherToday from "./WeatherToday";
 import axios from "axios";
 
 export default function Weather(props) {
-  const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState({});
   const [city, setCity] = useState(props.defaultCity);
 
@@ -17,12 +16,13 @@ export default function Weather(props) {
       humidity: responce.data.temperature.humidity,
       temperature: responce.data.temperature.current,
       feeling: responce.data.temperature.feels_like,
+      iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${responce.data.condition.icon}.png`,
       date: new Date(responce.data.time * 1000),
     });
-    setReady(true);
   }
-
-  function Search() {
+  console.log("icon", city, weatherData);
+  function Search(initiator) {
+    console.log("Search", initiator);
     let apiKey = "0tf4be4a6f7od6f8a4a30d931b721101";
     let units = "metric";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
@@ -30,13 +30,13 @@ export default function Weather(props) {
   }
   function handleSubmit(event) {
     event.preventDefault();
-    Search();
+    Search("submit");
   }
   function handleChange(event) {
     setCity(event.target.value);
   }
 
-  if (ready) {
+  if (Object.getOwnPropertyNames(weatherData).length) {
     return (
       <div className="Weather container">
         <div className="Search">
@@ -59,8 +59,8 @@ export default function Weather(props) {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    class="bi bi-search"
-                    viewbox="0 0 16 16"
+                    className="bi bi-search"
+                    viewBox="0 0 16 16"
                   >
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                   </svg>
@@ -73,7 +73,8 @@ export default function Weather(props) {
           </div>
         </div>
         <div>
-          {city}
+          {" "}
+          <h1> {city}</h1>
           <FormattedDate date={weatherData.date} />
         </div>
         <div>
@@ -82,7 +83,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    Search();
-    return "Loading...";
+    Search("loading");
+    return <div>Loading...</div>;
   }
 }

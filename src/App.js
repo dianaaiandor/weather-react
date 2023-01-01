@@ -6,7 +6,7 @@ function App() {
     <div className="wrapApp">
       <div className="App">
         <div className="container">
-          <Weather defaultCity="Paris" />
+          <Weather defaultCity="Kyiv" />
         </div>
       </div>
       <a

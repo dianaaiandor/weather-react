@@ -25,9 +25,8 @@ export default function WeatherToday(props) {
           </div>
           <div className="col-sm-4">
             <img
-              src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
-              alt="sun"
-              id="icon"
+              src={props.apiData.iconUrl}
+              alt="weather-icon"
               className="img-fluid"
               width={200}
             />
