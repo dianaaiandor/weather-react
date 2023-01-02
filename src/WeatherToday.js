@@ -1,4 +1,5 @@
 import React from "react";
+import UnitConversion from "./UnitConversion";
 
 export default function WeatherToday(props) {
   return (
@@ -32,18 +33,10 @@ export default function WeatherToday(props) {
             />
           </div>
           <div className="col-sm-4">
-            <p>
-              <span className="current-temperature">
-                {Math.round(props.apiData.temperature)}
-              </span>
-              <span className="degree">
-                <span>°C</span>
-              </span>
-            </p>
-            <p>
-              feels like: {Math.round(props.apiData.feeling)}
-              °C
-            </p>
+            <UnitConversion
+              celsius={props.apiData.temperature}
+              celsiusFeeling={props.apiData.feeling}
+            />
           </div>
         </div>
       </div>
