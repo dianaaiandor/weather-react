@@ -1,9 +1,13 @@
-.Search h1 {
+.Weather h1 {
   font-size: 30px;
   font-weight: 500;
 }
 
-.Search input {
+.Weather .WeatherSearchForm {
+  padding: 15px 0;
+}
+
+.Weather .WeatherSearchForm input {
   opacity: 0.33;
   border-radius: 10px;
   border: #35495e 1px solid;
@@ -12,11 +16,11 @@
   padding-left: 10px;
 }
 
-.Search button {
+.Weather .WeatherSearchForm button {
   opacity: 0.33;
   border-radius: 10px;
   border: #35495e 1px solid;
   line-height: 1.5;
   font-size: 18px;
-  padding-left: 10px;
+  padding-left: 13px;
 }

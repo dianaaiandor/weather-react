@@ -25,7 +25,7 @@ export default function UnitConversion(props) {
           <span>
             <span>
               <a href="./" onClick={showCelsius}>
-                °C
+                <strong>°C</strong>
               </a>{" "}
               |{" "}
               <a href="./" onClick={showFahrenheit}>
@@ -55,14 +55,14 @@ export default function UnitConversion(props) {
               </a>{" "}
               |{" "}
               <a href="./" onClick={showFahrenheit}>
-                °F
+                <strong>°F</strong>
               </a>
             </span>
           </span>
         </p>
         <p>
           feels like: {Math.round(props.celsiusFeeling * 1.8 + 32)}
-          °C
+          °F
         </p>
       </div>
     );

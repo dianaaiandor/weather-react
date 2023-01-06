@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Weather.css";
 import FormattedDate from "./FormattedDate";
 import WeatherToday from "./WeatherToday";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -39,10 +40,10 @@ export default function Weather(props) {
   if (Object.getOwnPropertyNames(weatherData).length) {
     return (
       <div className="Weather container">
-        <div className="Search">
+        <div className="WeatherSearchForm">
           <form onSubmit={handleSubmit}>
             <div className="row">
-              <div className="col-9">
+              <div className="col-10">
                 <input
                   className="form-control"
                   type="search"
@@ -52,7 +53,7 @@ export default function Weather(props) {
                   onChange={handleChange}
                 />
               </div>
-              <div className="col-3">
+              <div className="col-2">
                 <button className="btn btn-outline-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -68,9 +69,6 @@ export default function Weather(props) {
               </div>
             </div>
           </form>
-          <div>
-            <button className="btn btn-outline-secondary">My location</button>
-          </div>
         </div>
         <div>
           {" "}
@@ -79,6 +77,9 @@ export default function Weather(props) {
         </div>
         <div>
           <WeatherToday apiData={weatherData} />
+        </div>
+        <div>
+          <WeatherForecast apiData={weatherData} />
         </div>
       </div>
     );

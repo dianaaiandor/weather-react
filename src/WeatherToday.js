@@ -1,10 +1,11 @@
 import React from "react";
 import UnitConversion from "./UnitConversion";
+import "./WeatherToday.css";
 
 export default function WeatherToday(props) {
   return (
     <div>
-      <div className="Weather container">
+      <div className="WeatherToday container">
         <div className="row">
           <div className="col-sm-4 weather-parameters">
             <p>

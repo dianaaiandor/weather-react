@@ -4,4 +4,14 @@
 
 .UnitConversion a {
   display: inline;
+  text-decoration: none;
+}
+
+.UnitConversion a:hover {
+  text-decoration: underline;
+  color: #213458;
+}
+
+.UnitConversion p {
+  margin-bottom: 10px;
 }
