@@ -1,10 +1,11 @@
 import React from "react";
 import "./FormattedDate.css";
 
-export default function FormattedDate(props) {
-  let hour = props.date.getHours();
-  let minute = props.date.getMinutes();
-  let dayIndex = props.date.getDay();
+export default function FormattedDate() {
+  let date = new Date();
+  let hour = date.getHours();
+  let minute = date.getMinutes();
+  let dayIndex = date.getDay();
   let day = [
     "Sunday",
     "Monday",

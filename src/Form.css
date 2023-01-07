@@ -1,0 +1,21 @@
+.Form {
+  padding: 15px 0;
+}
+
+.Form input {
+  opacity: 0.33;
+  border-radius: 10px;
+  border: #35495e 1px solid;
+  line-height: 1.5;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.Form button {
+  opacity: 0.33;
+  border-radius: 10px;
+  border: #35495e 1px solid;
+  line-height: 1.5;
+  font-size: 18px;
+  padding-left: 13px;
+}
