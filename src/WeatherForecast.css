@@ -2,14 +2,3 @@
   text-align: center;
   margin-bottom: 15px;
 }
-
-.WeatherForecast .forecast-temp-max {
-  color: #213458;
-}
-.WeatherForecast .forecast-temp-min {
-  color: #887575;
-}
-
-.WeatherForecast p {
-  margin-bottom: 0;
-}

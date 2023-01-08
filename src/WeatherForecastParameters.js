@@ -1,12 +1,12 @@
 import React from "react";
-import "./WeatherForecastDay.css";
+import "./WeatherForecastParameters.css";
 
-export default function WeatherForecastDay(props) {
+export default function WeatherForecastParameters(props) {
   return (
-    <div className="WeatherForecast">
+    <div className="WeatherForecastParameters">
       <div className="row">
         <div className="col">
-          <p className="WeatherForecast-day">Fri</p>
+          <p className="WeatherForecastParameters-day">Fri</p>
           <img
             src={props.data.iconUrl}
             alt="weather-icon"

@@ -1,5 +1,5 @@
 import "./App.css";
-import Weather from "./Weather";
+import CurrentWeather from "./Weather";
 import NewUnits from "./NewUnits";
 import Form from "./Form";
 import FormattedDate from "./FormattedDate";
@@ -21,7 +21,7 @@ function App() {
           <NewUnits units={units} changeUnits={setUnits} />
           <FormattedDate />
           <City city={city} />
-          <Weather city={city} units={units} />
+          <CurrentWeather city={city} units={units} />
         </div>
       </div>
       <a

@@ -1,11 +1,11 @@
 import React from "react";
 import UnitConversion from "./UnitConversion";
-import "./WeatherToday.css";
+import "./CurrentWeatherParameters.css";
 
-export default function WeatherToday(props) {
+export default function CurrentWeatherParameters(props) {
   return (
     <div>
-      <div className="WeatherToday container">
+      <div className="CurrentWeatherParameters container">
         <div className="row">
           <div className="col-sm-4 weather-parameters">
             <p>

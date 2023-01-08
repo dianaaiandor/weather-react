@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Weather.css";
-import WeatherToday from "./WeatherToday";
+import "./CurrentWeather.css";
+import CurrentWeatherParameters from "./CurrentWeatherParameters";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -32,9 +32,9 @@ export default function Weather(props) {
       setWeatherData(null);
     }
     return (
-      <div className="Weather container">
+      <div className="CurrentWeather container">
         <div>
-          <WeatherToday apiData={weatherData} />
+          <CurrentWeatherParameters apiData={weatherData} />
         </div>
       </div>
     );
