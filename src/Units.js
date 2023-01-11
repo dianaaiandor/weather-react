@@ -1,7 +1,7 @@
 import React from "react";
+import "./Units.css";
 
-export default function NewUnits(props) {
-  console.log("UNITS", props.units);
+export default function Units(props) {
   function setC() {
     props.changeUnits("metric");
   }
@@ -10,7 +10,7 @@ export default function NewUnits(props) {
   }
 
   return (
-    <div>
+    <div className="Units">
       <span
         style={
           props.units === "metric" ? { textDecoration: "underline" } : null

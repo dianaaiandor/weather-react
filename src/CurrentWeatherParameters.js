@@ -1,5 +1,4 @@
 import React from "react";
-import UnitConversion from "./UnitConversion";
 import "./CurrentWeatherParameters.css";
 
 export default function CurrentWeatherParameters(props) {
@@ -34,10 +33,15 @@ export default function CurrentWeatherParameters(props) {
             />
           </div>
           <div className="col-sm-4">
-            <UnitConversion
-              celsius={props.apiData.temperature}
-              celsiusFeeling={props.apiData.feeling}
-            />
+            <div>
+              <p>
+                <span className="current-temperature">
+                  {" "}
+                  {Math.round(props.apiData.temperature)}°
+                </span>
+              </p>
+              <p>feels like: {Math.round(props.apiData.feeling)}°</p>
+            </div>
           </div>
         </div>
       </div>

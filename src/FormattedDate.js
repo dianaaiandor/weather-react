@@ -25,7 +25,7 @@ export default function FormattedDate() {
   return (
     <div className="FormattedDate">
       <p>
-        {day[dayIndex]}, {hour}:{minute} (GMT+2)
+        {day[dayIndex]}, {hour}:{minute}
       </p>
     </div>
   );

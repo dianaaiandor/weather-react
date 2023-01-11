@@ -1,4 +1,8 @@
 .FormattedDate {
   font-size: 18px;
-  color: #b02f2f;
+  color: #ffffff;
+}
+.FormattedDate p {
+  margin-bottom: 0;
+  margin-left: 5px;
 }

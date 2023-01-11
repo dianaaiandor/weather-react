@@ -1,9 +1,10 @@
 import "./App.css";
-import CurrentWeather from "./Weather";
-import NewUnits from "./NewUnits";
+import CurrentWeather from "./CurrentWeather";
+import Units from "./Units";
 import Form from "./Form";
 import FormattedDate from "./FormattedDate";
 import City from "./City";
+import WeatherForecast from "./WeatherForecast";
 import React, { useState } from "react";
 
 function App() {
@@ -17,11 +18,21 @@ function App() {
     <div className="wrapApp">
       <div className="App">
         <div className="container">
-          <Form changeCity={setCity} />
-          <NewUnits units={units} changeUnits={setUnits} />
           <FormattedDate />
+          <Form changeCity={setCity} />
+
           <City city={city} />
-          <CurrentWeather city={city} units={units} />
+          <Units units={units} changeUnits={setUnits} />
+          <CurrentWeather
+            city={city}
+            units={units}
+            key={"current" + city + units}
+          />
+          <WeatherForecast
+            city={city}
+            units={units}
+            key={"forecast" + city + units}
+          />
         </div>
       </div>
       <a
