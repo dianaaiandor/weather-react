@@ -1,5 +1,6 @@
 import React from "react";
 import "./CurrentWeatherParameters.css";
+import ShowCorF from "./ShowCorF";
 
 export default function CurrentWeatherParameters(props) {
   return (
@@ -37,7 +38,8 @@ export default function CurrentWeatherParameters(props) {
               <p>
                 <span className="current-temperature">
                   {" "}
-                  {Math.round(props.apiData.temperature)}°
+                  {Math.round(props.apiData.temperature)}°{""}
+                  <ShowCorF units={props.units} />
                 </span>
               </p>
               <p>feels like: {Math.round(props.apiData.feeling)}°</p>
