@@ -28,7 +28,7 @@ export default function Weather(props) {
     return (
       <div className="CurrentWeather container">
         <div>
-          <CurrentWeatherParameters apiData={weatherData} units={props.units} />
+          <CurrentWeatherParameters apiData={weatherData} />
         </div>
       </div>
     );
