@@ -18,11 +18,19 @@ function App() {
     <div className="wrapApp">
       <div className="App">
         <div className="container">
-          <FormattedDate />
+          <div className="row">
+            <div className="col">
+              <FormattedDate />
+            </div>
+            <div className="col">
+              <Units units={units} changeUnits={setUnits} />
+            </div>
+          </div>
+
           <Form changeCity={setCity} />
 
           <City city={city} />
-          <Units units={units} changeUnits={setUnits} />
+
           <CurrentWeather
             city={city}
             units={units}
